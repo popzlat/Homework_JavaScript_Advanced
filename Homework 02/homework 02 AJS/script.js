@@ -62,10 +62,10 @@ function Family(_familyMembers) {
 
     this.familyMembers = _familyMembers;
     this.calculateSum = function () {
-        console.log('The sum of all year is ' + bornYearOfMembers.reduce(getSum))
+        return 'The sum of all year is ' + yearsOfMembers.reduce(getSum)
     };
     this.calculateAverage = function () {
-        console.log(` The average years of all family members is ` + yearsOfMembers.reduce(getSum) / yearsOfMembers.length)
+        return ` The average years of all family members is ` + yearsOfMembers.reduce(getSum) / yearsOfMembers.length
     };
 };
 
