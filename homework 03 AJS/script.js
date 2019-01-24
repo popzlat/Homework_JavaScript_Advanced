@@ -1,8 +1,4 @@
 // Exercise 01  Write a function that will clean up an array, and return the cleaned up value.
-let name = "";
-
-
-document.write(name)
 
 let myArray = [NaN, false, 2, 4, 55, "", NaN, undefined];
 let cleanArray = [];
