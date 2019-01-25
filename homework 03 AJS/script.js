@@ -31,6 +31,80 @@ convert(46);
 console.log('46 ' + ' in coins ' + result)
 
 
+// Exercise 03 Find all descendants for a given family member (recursive)
+
+const familyTree = [{
+    name: "Oliver",
+    lastname: "Stones",
+    childrens: [
+        {
+            name: "Viktor",
+            lastname: "Stones",
+            childrens: []
+        },
+        {
+            name: "Suzan",
+            lastname: "Sloun",
+            childrens: [
+                {
+                    name: "Oliver jr",
+                    lastname: "Sloun",
+                    childrens: [
+                        {
+                            name: "Alexandar",
+                            lastname: "Sloun",
+                            childrens: [
+                                {
+                                    name: "Suzie",
+                                    lastname: "Sloun",
+                                    childrens: []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Alex",
+                    lastname: "Sloun",
+                    childrens: [
+                        {
+                            name: "Gabriel",
+                            lastname: "Sloun",
+                            childrens: [
+                                {
+                                    name: "Gabriela",
+                                    lastname: "Sloun",
+                                    childrens: []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}];
+
+// recursive function 
+function recursion(firstName, lastName, tree, flagPrint) {
+    for (var i = 0; i < tree.length; i++) {
+        var element = tree[i];
+        if (flagPrint == true) {
+            console.log(element.name + " " + element.lastname);
+        }
+        if (element.name == firstName && element.lastname == lastName) {
+            recursion(firstName, lastName, element.childrens, true);
+        }
+        else {
+            recursion(firstName, lastName, element.childrens, flagPrint)
+        }
+    }
+}
+// testing 
+recursion("Oliver", "Stones", familyTree, true);
+recursion("Alex", "Sloun", familyTree, true);
+
+
 
 // Exercise 04 BONUS find the missing numbers.
 
