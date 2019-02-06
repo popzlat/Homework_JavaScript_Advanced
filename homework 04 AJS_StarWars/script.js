@@ -21,7 +21,7 @@ $(function () {
             .append(`${findPerson.name} has ${findPerson.hair_color} hair color and ${findPerson.eye_color} eyes`)
             .css("background-color", "yellow")
         }
-        var findPlanet = null
+        let findPlanet = null
         planetArr.forEach(element => {
             if (element.name === name) {
                 findPlanet = element;
